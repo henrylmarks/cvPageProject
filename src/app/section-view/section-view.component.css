@@ -1,0 +1,18 @@
+.section-container {
+  display: flex;
+  flex-direction: var(--flex-direction);
+  justify-content: center;
+}
+
+.section-title {
+  background-color: var(--title-background);
+}
+
+.section-content {
+  background-color: var(--content-background);
+  padding: 25px;
+  box-sizing: border-box;
+  width: 1000px;
+  position: relative;
+  overflow: scroll;
+}

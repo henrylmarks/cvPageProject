@@ -1,0 +1,21 @@
+<div class="slide-container">
+  <div class="slide-banner" >
+    <h3>{{slideData.title}} </h3>
+    <div class="slide-org">
+      <p>{{slideData.organisation}}</p>
+      <p class="slide-dates">{{slideData.startDate}} - {{slideData.endDate}}</p>
+    </div>
+  </div>
+
+
+  <div *ngIf="slideData.detailList?.length else noDetails" class="slide-detail-container" >
+    <p class="slide-detail" *ngFor="let detail of slideData.detailList"> {{detail.description}}</p>
+  </div>
+</div>
+
+
+
+<ng-template #noDetails>
+  <p>No relevant experience for the currently applied filters</p></ng-template>
+
+

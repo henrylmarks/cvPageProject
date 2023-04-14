@@ -1,0 +1,16 @@
+<div class="name-container">
+  <h2 class="name">{{profileData.name}} </h2>
+  <h4 class="jobTitle">{{profileData.jobTitle}}</h4>
+</div>
+<div class="cv-wrapper">
+  <app-profile-view [profileData]="profileData"></app-profile-view>
+  <app-filter></app-filter>
+  <div *ngIf="sections$ | async as sections" class="cv-section-list">
+    <app-section-view class="cv-section" *ngFor="let section of sections" [sectionData]="section"></app-section-view>
+  </div>
+
+</div>
+
+
+
+

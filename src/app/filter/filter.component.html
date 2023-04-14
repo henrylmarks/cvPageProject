@@ -1,0 +1,19 @@
+<button @buttonAnimation *ngIf="!showFilterOptions" (click)="showFilterOptions=true"> Filter by skills</button>
+<div *ngIf="showFilterOptions">
+<div class="filter-options-container">
+  <button *ngFor="let filter of availableFilters" [ngClass]="filter.active? 'filter-active' : ''"
+          (click)="toggleFilterActive(filter)"
+          @buttonAnimation
+          class="filter-button">
+    {{filter.value}}
+  </button>
+</div>
+
+  <div class="filter-actions-container">
+    <button @buttonAnimation (click)="filter()"> Apply filters</button>
+    <button @buttonAnimation (click)="showFilterOptions=false" > Close</button>
+    <button @buttonAnimation (click)="clearFilters()">Clear filters</button>
+  </div>
+
+
+</div>

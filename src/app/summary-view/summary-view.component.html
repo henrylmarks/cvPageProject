@@ -1,0 +1,14 @@
+<div class="summary-banner">
+  <h3>{{summaryData.title}} </h3>
+  <div class="summary-orgdetails">
+    <h4>{{summaryData.organisation}}</h4>
+    <p class="summary-dates">{{summaryData.startDate}} - {{summaryData.endDate}}</p>
+  </div>
+</div>
+
+
+<div *ngIf="summaryData.detailList?.length">
+  <p *ngFor="let detail of summaryData.detailList"> {{detail.description}}</p>
+</div>
+
+
